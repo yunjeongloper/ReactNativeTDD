@@ -4,20 +4,21 @@
 
 import 'react-native';
 import React from 'react';
-import {Text} from 'react-native';
-import {shallow, mount, render} from 'enzyme';
+import {shallow} from 'enzyme';
+import App from '../src/App';
 
-describe('Jest', () => {
-  it('is it wokring?', () => {
-    const a = 1;
-    expect(a + 1).toBe(2);
+describe('App', () => {
+  const wrapper = shallow(<App />);
+
+  it('is Title visible', () => {
+    expect(wrapper.find('Text').contains('TDD ToDo')).toBe(true); // TDD ToDo라는 내용의 Text Component가 있느냐?
   });
-});
 
-describe('Enzyme', () => {
-  it('is it working?', () => {
-    const text = 'some text';
-    const wrapper = shallow(<Text>{text}</Text>);
-    expect(wrapper.text()).toBe(text);
+  it('is AddToDo visible?', () => {
+    expect(wrapper.find('AddToDo')).toHaveLength(1); // AddToDo라는 컴포넌트가 한 개가 있느냐?
+  });
+
+  it('is ToDoList visible?', () => {
+    expect(wrapper.find('ToDoList')).toHaveLength(1); // ToDoList 컴포넌트가 한 개가 있느냐?
   });
 });

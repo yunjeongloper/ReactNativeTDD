@@ -8,5 +8,5 @@ module.exports = {
   setupFiles: ['<rootDir>/__tests__/setup.js'],
   transformIgnorePatterns: ['node_modules/(?!(jest-)?react-native)'],
   coveragePathIgnorePatterns: ['/node_modules/', '/jest'],
-  testPathIgnorePatterns: ['/__tests__/setup.js'],
+  testPathIgnorePatterns: ['/__tests__/setup.js', '/e2e'],
 };
