@@ -5,7 +5,8 @@ module.exports = {
   transform: {
     '^.+\\.js$': '<rootDir>/node_modules/react-native/jest/preprocessor.js',
   },
-  setupFiles: ['<rootDir>/setup.js'],
+  setupFiles: ['<rootDir>/__tests__/setup.js'],
   transformIgnorePatterns: ['node_modules/(?!(jest-)?react-native)'],
   coveragePathIgnorePatterns: ['/node_modules/', '/jest'],
+  testPathIgnorePatterns: ['/__tests__/setup.js'],
 };
