@@ -7,7 +7,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import App from '../src/App';
 
-describe('App', () => {
+describe('App Rendering', () => {
   const wrapper = shallow(<App />);
 
   it('is Title visible', () => {

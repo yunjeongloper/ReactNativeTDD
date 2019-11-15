@@ -2,6 +2,8 @@
 
 Using Jest, Enzyme, and Detox for TDD on React Native!
 
+References to
+
 ## Jest
 
 - react-dom을 설치해줘야 함
@@ -52,3 +54,30 @@ detox-init 으로 생성된 템플릿 코드이니 현재 우리 프로젝트와
 - 실제로 테스트 코드를 작성하는데 'ToDo'를 'Todo'로 입력했다가 에러가 나서 금방 오타를 찾았다. 테스트 코드에 대한 확신만 있다면 사소한 오류라도 쉽게 예측할 수 있을 것 같다.
 - .toHaveLength(1) <-> .toBeVisible()? 후자가 훨씬 직관적인데 어느 라이브러리에서 직원해주는것일까?
 - ***테스트 코드를 작성한 부분 넘어서 진행을 하면 안된다*** <- 계속 강조하심!!!
+
+## Coding Test Cases
+
+- 테스크 코드에서 it 이 실행되기 전에 테스트할 wrapper을 새로 생성해주면 더 깔끔한 테스트를 진행할 수 있다. beforeEach를 사용해서 wrapper가 초기화되도록 하자
+
+```javascript
+describe('AddToDo', () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<AddToDo />);
+  });
+
+  it('it TextInput visible?', () => {
+    expect(wrapper.find('TextInput')).toHaveLength(1);
+  });
+
+  it('it Button visible?', () => {
+    expect(wrapper.find('Button')).toHaveLength(1);
+  });
+});
+```
+
+- 버튼을 눌렸다고 가정하고 싶을 때는 React Native의 props인 onPress를 활용하면 된다.
+- 한 컴포넌트가 props로 받게 될 콜백 함수를 테스트하고싶은데.. 좀 복잡하다 jest.fn()을 쓰는데 이건 더 찾아보고 정리해야 할 듯. 대충 jest에서 이 함수가 몇 번 호출이 되었는지, 어떤 인자와 호출이 되었는지 확인할 수 있게 해줌.
+- 테스트 코드에서 콜백 함수를 테스트해보고 싶다면 props 객체를 만들고 그 안에 콜백 함수를 넣어서 props객체를 wrapper 컴포넌트에 전달해줘야 한다. 그래야 테스크 코드에서 해당 함수를 컨트롤할 수 있기 때문이다.
+- 강의에서는 Class Component를 사용하는데, 나는 연습도해볼겸 Functional Component + Hooks로 코드를 짜고 있다. 동일한 테스트 코드가 성공하는 코드이지만 훨씬 간결하고 깔끔하다!!
