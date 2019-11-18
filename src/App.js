@@ -15,10 +15,22 @@ const App: () => React$Node = () => {
   const [items, setItems] = useState([]);
 
   const onAdded = text => {
-    setItems([{text, completed: false}, ...items]);
+    setItems([...items, {text, completed: false}]);
   };
 
-  const onCompleted = () => {};
+  const onCompleted = index => {
+    setItems([
+      ...items.map((item, i) => {
+        if (index !== i) {
+          return item;
+        }
+        return {
+          ...item,
+          completed: !item.completed,
+        };
+      }),
+    ]);
+  };
 
   const onDeleted = () => {};
 
