@@ -32,7 +32,9 @@ const App: () => React$Node = () => {
     ]);
   };
 
-  const onDeleted = () => {};
+  const onDeleted = index => {
+    setItems([...items.slice(0, index), ...items.slice(index + 1)]);
+  };
 
   return (
     <SafeAreaView testID="welcome">

@@ -2,7 +2,8 @@
 
 Using Jest, Enzyme, and Detox for TDD on React Native!
 
-References to
+> 인프런 강의 [TDD 개발 방법론을 활용한 React Native 앱 개발
+](https://www.inflearn.com/course/React-TDD/lecture/20796)를 수강하며 작성한 코드입니다.
 
 ## Jest
 
@@ -85,9 +86,10 @@ describe('AddToDo', () => {
 ## Coding E2E Test
 
 컴포넌트 테스트를 작성하고 난 후에는 E2E 테스트, 즉 기능 테스트를 작성한다.
-e2e/
+
+- ```e2e/``` 디렉토리에서 코딩한다.
+- detox test 너무 재미있다. RPA 짜는 것 같다.
 
 ## Questions
 
 - describe 중첩은 어느 경우에 사용하는지?
-
