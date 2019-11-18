@@ -7,7 +7,7 @@
  */
 
 import React, {useState} from 'react';
-import {Text, SafeAreaView} from 'react-native';
+import {Text, SafeAreaView, StyleSheet} from 'react-native';
 import AddToDo from './AddToDo';
 import ToDoList from './ToDoList';
 
@@ -37,12 +37,24 @@ const App: () => React$Node = () => {
   };
 
   return (
-    <SafeAreaView testID="welcome">
-      <Text>TDD ToDo</Text>
+    <SafeAreaView testID="welcome" style={styles.container}>
+      <Text style={styles.title}>TDD ToDo</Text>
       <AddToDo onAdded={onAdded} />
       <ToDoList items={items} onCompleted={onCompleted} onDeleted={onDeleted} />
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  title: {
+    marginHorizontal: 20,
+    marginVertical: 10,
+    fontSize: 21,
+    fontWeight: 'bold',
+  },
+});
 
 export default App;

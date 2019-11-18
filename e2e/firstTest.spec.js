@@ -7,10 +7,6 @@ describe('Example', () => {
     await device.reloadReactNative();
   });
 
-  it('should have welcome screen', async () => {
-    await expect(element(by.id('welcome'))).toBeVisible();
-  });
-
   it('Adding ToDo Item should work!', async () => {
     await element(by.id('textInput')).tap();
     await element(by.id('textInput')).typeText(text);
