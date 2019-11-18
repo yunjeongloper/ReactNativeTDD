@@ -90,6 +90,17 @@ describe('AddToDo', () => {
 - ```e2e/``` 디렉토리에서 코딩한다.
 - detox test 너무 재미있다. RPA 짜는 것 같다.
 
+## 마치며
+
+TDD의 장점?
+
+- 개발 시간 단축
+- 앱을 구동하지 않고도 컴포넌트 디자인을 완료할 수 있고, e2e 테스트도 사람이 직접 손으로 하는것 보다 더 빠르게 진행된다
+- 사이드 이펙트 억제
+- 버그를 줄일 수 있음
+
+- navigaiton, redux(action, reducer, sstore), webservice에 대한 TDD도 있음
+
 ## Questions
 
 - describe 중첩은 어느 경우에 사용하는지?
