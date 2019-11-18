@@ -6,18 +6,28 @@
  * @flow
  */
 
-import React from 'react';
-import {View, Text} from 'react-native';
+import React, {useState} from 'react';
+import {Text, SafeAreaView} from 'react-native';
 import AddToDo from './AddToDo';
 import ToDoList from './ToDoList';
 
 const App: () => React$Node = () => {
+  const [items, setItems] = useState([]);
+
+  const onAdded = text => {
+    setItems([{text, completed: false}, ...items]);
+  };
+
+  const onCompleted = () => {};
+
+  const onDeleted = () => {};
+
   return (
-    <View testID="welcome">
+    <SafeAreaView testID="welcome">
       <Text>TDD ToDo</Text>
-      <AddToDo />
-      <ToDoList />
-    </View>
+      <AddToDo onAdded={onAdded} />
+      <ToDoList items={items} onCompleted={onCompleted} onDeleted={onDeleted} />
+    </SafeAreaView>
   );
 };
 

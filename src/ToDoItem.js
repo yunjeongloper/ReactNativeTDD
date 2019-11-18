@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
 const ToDoItem = ({item, index, onCompleted, onDeleted}) => {
   return (
     <View style={item.completed ? styles.completed : styles.default}>
-      <Text />
+      <Text>{item.text}</Text>
       <Button title="Complete" onPress={() => onCompleted(index)} />
       <Button title="Delete" onPress={() => onDeleted(index)} />
     </View>

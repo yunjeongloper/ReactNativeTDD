@@ -6,8 +6,8 @@ const AddToDo = ({onAdded}) => {
 
   return (
     <View>
-      <TextInput onChangeText={value => setText(value)} />
-      <Button onPress={() => onAdded(text)} />
+      <TextInput testID="textInput" onChangeText={value => setText(value)} />
+      <Button testID="addButton" title="Add" onPress={() => onAdded(text)} />
     </View>
   );
 };

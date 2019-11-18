@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1573805978605" clover="3.2.0">
-  <project timestamp="1573805978605" name="All files">
+<coverage generated="1574042478654" clover="3.2.0">
+  <project timestamp="1574042478654" name="All files">
     <metrics statements="30" coveredstatements="30" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="8" elements="40" coveredelements="40" complexity="0" loc="30" ncloc="30" packages="1" files="4" classes="4"/>
     <file name="AddToDo.js" path="/Users/jang-yunjeong/NotCloud/TDDRN/src/AddToDo.js">
       <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
