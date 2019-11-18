@@ -23,6 +23,8 @@ describe('ToDoList Rendering', () => {
           completed: true,
         },
       ],
+      onCompleted: jest.fn(),
+      onDeleted: jest.fn(),
     };
     wrapper = shallow(<ToDoList {...props} />);
   });
@@ -31,7 +33,7 @@ describe('ToDoList Rendering', () => {
     expect(wrapper.find('FlatList')).toHaveLength(1);
   });
 
-  it('should pass props to FlatList?', () => {
+  it('should pass props to FlatList!', () => {
     expect(wrapper.find('FlatList').prop('data')).toBe(props.items);
   });
 });

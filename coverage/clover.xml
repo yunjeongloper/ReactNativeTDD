@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1574059315191" clover="3.2.0">
-  <project timestamp="1574059315191" name="All files">
-    <metrics statements="50" coveredstatements="41" conditionals="16" coveredconditionals="4" methods="19" coveredmethods="7" elements="85" coveredelements="52" complexity="0" loc="50" ncloc="50" packages="1" files="4" classes="4"/>
+<coverage generated="1574064178177" clover="3.2.0">
+  <project timestamp="1574064178177" name="All files">
+    <metrics statements="51" coveredstatements="43" conditionals="16" coveredconditionals="4" methods="19" coveredmethods="8" elements="86" coveredelements="55" complexity="0" loc="51" ncloc="51" packages="1" files="4" classes="4"/>
     <file name="AddToDo.js" path="/Users/jang-yunjeong/NotCloud/TDDRN/src/AddToDo.js">
-      <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <line num="1" count="2" type="stmt"/>
       <line num="2" count="2" type="stmt"/>
-      <line num="4" count="5" type="stmt"/>
+      <line num="3" count="2" type="stmt"/>
       <line num="5" count="5" type="stmt"/>
-      <line num="7" count="5" type="stmt"/>
-      <line num="8" count="1" type="stmt"/>
+      <line num="6" count="5" type="stmt"/>
+      <line num="8" count="5" type="stmt"/>
       <line num="9" count="1" type="stmt"/>
-      <line num="12" count="5" type="stmt"/>
-      <line num="18" count="1" type="stmt"/>
-      <line num="25" count="2" type="stmt"/>
-      <line num="47" count="2" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="13" count="5" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="31" count="2" type="stmt"/>
+      <line num="59" count="2" type="stmt"/>
     </file>
     <file name="App.js" path="/Users/jang-yunjeong/NotCloud/TDDRN/src/App.js">
       <metrics statements="19" coveredstatements="13" conditionals="12" coveredconditionals="0" methods="10" coveredmethods="1"/>
@@ -39,17 +40,17 @@
       <line num="60" count="1" type="stmt"/>
     </file>
     <file name="ToDoItem.js" path="/Users/jang-yunjeong/NotCloud/TDDRN/src/ToDoItem.js">
-      <metrics statements="10" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="2"/>
+      <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
       <line num="1" count="3" type="stmt"/>
       <line num="2" count="3" type="stmt"/>
       <line num="3" count="3" type="stmt"/>
-      <line num="5" count="8" type="stmt"/>
-      <line num="6" count="8" type="stmt"/>
+      <line num="5" count="9" type="stmt"/>
+      <line num="6" count="9" type="stmt"/>
       <line num="11" count="1" type="stmt"/>
-      <line num="26" count="0" type="stmt"/>
-      <line num="32" count="3" type="stmt"/>
-      <line num="47" count="3" type="stmt"/>
-      <line num="51" count="3" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="33" count="3" type="stmt"/>
+      <line num="49" count="3" type="stmt"/>
+      <line num="53" count="3" type="stmt"/>
     </file>
     <file name="ToDoList.js" path="/Users/jang-yunjeong/NotCloud/TDDRN/src/ToDoList.js">
       <metrics statements="10" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>

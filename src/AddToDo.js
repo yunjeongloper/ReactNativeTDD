@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import {View, TextInput, Button, StyleSheet} from 'react-native';
+import {View, TextInput, TouchableOpacity, StyleSheet} from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const AddToDo = ({onAdded}) => {
   const [text, setText] = useState('');
@@ -17,7 +18,12 @@ const AddToDo = ({onAdded}) => {
         value={text}
         onChangeText={value => setText(value)}
       />
-      <Button testID="addButton" title="Add" onPress={handleAdded} />
+      <TouchableOpacity
+        activeOpacity={0.5}
+        testID="addButton"
+        onPress={handleAdded}>
+        <Icon name={'plus-circle'} size={30} style={styles.icon} />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -41,6 +47,12 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#e0e0e0',
     borderRadius: 20,
+  },
+  icon: {
+    marginLeft: 12,
+    color: 'black',
+    width: 30,
+    height: 30,
   },
 });
 

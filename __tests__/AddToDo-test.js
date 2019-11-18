@@ -19,7 +19,7 @@ describe('AddToDo Rendering', () => {
   });
 
   it('is Button visible?', () => {
-    expect(wrapper.find('Button')).toHaveLength(1);
+    expect(wrapper.find('TouchableOpacity')).toHaveLength(1);
   });
 });
 
@@ -36,7 +36,7 @@ describe('AddToDo Interaction', () => {
     wrapper = shallow(<AddToDo {...props} />);
 
     wrapper.find('TextInput').simulate('changeText', text);
-    wrapper.find('Button').prop('onPress')();
+    wrapper.find('TouchableOpacity').prop('onPress')();
   });
 
   it('should call the onAdded callback with input text', () => {

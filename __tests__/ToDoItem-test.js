@@ -5,7 +5,7 @@
 import 'react-native';
 import React from 'react';
 import {shallow} from 'enzyme';
-import ToDoItem, {styles} from '../src/ToDoItem';
+import ToDoItem from '../src/ToDoItem';
 
 describe('ToDoItem Rendering', () => {
   let wrapper;
@@ -23,12 +23,8 @@ describe('ToDoItem Rendering', () => {
     expect(wrapper.find('Text')).toHaveLength(1);
   });
 
-  it('is one circle TouchableOpacity visible?', () => {
-    expect(wrapper.find('TouchableOpacity')).toHaveLength(1);
-  });
-
-  it('is two Button visible?', () => {
-    expect(wrapper.find('Button')).toHaveLength(1);
+  it('is two TouchableOpacity visible?', () => {
+    expect(wrapper.find('TouchableOpacity')).toHaveLength(2);
   });
 
   describe('Uncompleted', () => {
@@ -92,19 +88,19 @@ describe('ToDoItem Interaction', () => {
     });
   });
 
-  // describe('Delete', () => {
-  //   beforeEach(() => {
-  //     props.item.completed = true;
-  //     wrapper = shallow(<ToDoItem {...props} />);
-  //     wrapper
-  //       .find('Button')
-  //       .at(1)
-  //       .prop('onPress')();
-  //   });
+  describe('Delete', () => {
+    beforeEach(() => {
+      props.item.completed = true;
+      wrapper = shallow(<ToDoItem {...props} />);
+      wrapper
+        .find('TouchableOpacity')
+        .at(1)
+        .prop('onPress')();
+    });
 
-  //   it('should pass the index to onCompleted', () => {
-  //     expect(props.onDeleted).toHaveBeenCalledTimes(1);
-  //     expect(props.onDeleted).toHaveBeenCalledWith(props.index);
-  //   });
-  // });
+    it('should pass the index to onDeleted', () => {
+      expect(props.onDeleted).toHaveBeenCalledTimes(1);
+      expect(props.onDeleted).toHaveBeenCalledWith(props.index);
+    });
+  });
 });

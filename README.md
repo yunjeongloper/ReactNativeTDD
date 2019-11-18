@@ -5,6 +5,11 @@ Using Jest, Enzyme, and Detox for TDD on React Native!
 > 인프런 강의 [TDD 개발 방법론을 활용한 React Native 앱 개발
 ](https://www.inflearn.com/course/React-TDD/lecture/20796)를 수강하며 작성한 코드입니다.
 
+## E2E Testing
+
+![testing-terminal](./src/TDDTest2.gif)
+![testing-app](./src/TDDTest1.gif)
+
 ## Jest
 
 - react-dom을 설치해줘야 함

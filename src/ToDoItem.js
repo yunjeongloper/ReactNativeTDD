@@ -20,11 +20,12 @@ const ToDoItem = ({item, index, onCompleted, onDeleted}) => {
         testID={item.completed ? 'completed' : 'uncompleted'}>
         {item.text}
       </Text>
-      <Button
+      <TouchableOpacity
+        activeOpacity={0.5}
         testID="deleteButton"
-        title="Delete"
-        onPress={() => onDeleted(index)}
-      />
+        onPress={() => onDeleted(index)}>
+        <Icon name={'minus'} size={30} style={styles.icon} />
+      </TouchableOpacity>
     </View>
   );
 };
